@@ -8,7 +8,10 @@ app._unparsable_cell(
     r"""
     $Asin(\omega \cdot t)$
     """,
-    column=None, disabled=False, hide_code=True, name="_"
+    column=None,
+    disabled=False,
+    hide_code=True,
+    name="_",
 )
 
 
@@ -22,7 +25,7 @@ def _(mo):
 
 @app.cell
 def _(A, np, omega):
-    x = np.arange(-3*np.pi, 3*np.pi, 0.001)
+    x = np.arange(-3 * np.pi, 3 * np.pi, 0.001)
     y = A.value * np.sin(x * omega.value)
     return x, y
 
